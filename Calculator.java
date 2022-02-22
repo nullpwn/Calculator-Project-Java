@@ -14,9 +14,10 @@ public class Calculator {
 
         JLabel displayLabel = new JLabel("OK");
         displayLabel.setBounds(30, 50, 540, 40);
-        displayLabel.setBackground(Color.BLUE);
+        displayLabel.setBackground(Color.DARK_GRAY);
         displayLabel.setOpaque(true);
         displayLabel.setHorizontalAlignment(SwingConstants.RIGHT);
+        displayLabel.setForeground(Color.white);
         
         jf.add(displayLabel);
 
