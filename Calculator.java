@@ -69,7 +69,24 @@ public class Calculator {
         JButton equalButton = new JButton("=");
         equalButton.setBounds(230, 430, 80, 80);
         jf.add(equalButton);
+        
+        // Operators
 
+        JButton divButton = new JButton("/"); // Div
+        divButton.setBounds(330, 130, 80, 80);
+        jf.add(divButton);
+
+        JButton mulButton = new JButton("x"); //Mul
+        mulButton.setBounds(330, 230, 80, 80);
+        jf.add(mulButton);
+
+        JButton minButton = new JButton("-"); //Sub
+        minButton.setBounds(330, 330, 80, 80);
+        jf.add(minButton);
+
+        JButton addButton = new JButton("+"); //Add
+        addButton.setBounds(330, 430, 80, 80);
+        jf.add(addButton);
 
 
 
