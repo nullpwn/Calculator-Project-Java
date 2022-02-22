@@ -1,5 +1,5 @@
 import java.awt.Color;
-import java.util.Scanner;
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -59,11 +59,11 @@ public class Calculator {
 
 
         JButton dotButton = new JButton("."); //ROW 4
-        dotButton.setBounds(130, 430, 80, 80);
+        dotButton.setBounds(30, 430, 80, 80);
         jf.add(dotButton);
 
         JButton zeroButton = new JButton("0"); 
-        zeroButton.setBounds(30, 430, 80, 80);
+        zeroButton.setBounds(130, 430, 80, 80);
         jf.add(zeroButton);
 
         JButton equalButton = new JButton("=");
