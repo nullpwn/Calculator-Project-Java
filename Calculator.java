@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.SwingConstants;
 
 public class Calculator {
     public Calculator() {
@@ -15,6 +16,7 @@ public class Calculator {
         displayLabel.setBounds(30, 50, 540, 40);
         displayLabel.setBackground(Color.BLUE);
         displayLabel.setOpaque(true);
+        displayLabel.setHorizontalAlignment(SwingConstants.RIGHT);
         
         jf.add(displayLabel);
 
