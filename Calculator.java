@@ -1,14 +1,16 @@
 import java.awt.Color;
 import java.awt.Font;
-
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
-public class Calculator {
+public class Calculator implements ActionListener {
+    JFrame jf;
     public Calculator() {
-        JFrame jf = new JFrame("Calculator");
+        jf = new JFrame("Calculator");
         jf.setLayout(null);
         jf.setSize(600, 600);
         jf.setLocation(300, 150);
@@ -25,6 +27,7 @@ public class Calculator {
         sevenButton.setBounds(30, 130, 80, 80);
         sevenButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(sevenButton);
+        sevenButton.addActionListener(this);
 
         JButton eightButton = new JButton("8");
         eightButton.setBounds(130, 130, 80, 80);
@@ -115,6 +118,12 @@ public class Calculator {
 
     public static void main(String[] args) {
         new Calculator();
+    }
+    
+    @Override
+    public void actionPerformed(ActionEvent e) {
+       jf.getContentPane().setBackground(Color.blue);
+        
     }
 
 }
