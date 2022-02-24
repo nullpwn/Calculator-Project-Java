@@ -7,6 +7,6 @@ Simple Calculator made using JAVA implemented using Swing
 
 ![Calculator Screenshot](https://github.com/nullpwn/Calculator-Project-Java/blob/master/Calculator%20Screenshot.png)
 
-# Author
+# Created By
 
 **[Alwin Paul](https://www.linkedin.com/in/alwin-paul/)**
