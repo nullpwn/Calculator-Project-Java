@@ -33,7 +33,7 @@ public class Calculator implements ActionListener{
 
         addButton = new JButton("+");
         subButton = new JButton("-");
-        mulButton = new JButton("x");
+        mulButton = new JButton("*");
         divButton = new JButton("/");
         decimalButton = new JButton(".");
         equalButton = new JButton("=");
@@ -136,7 +136,7 @@ public class Calculator implements ActionListener{
          if(e.getSource() == mulButton){
 
             num1 = Double.parseDouble(textField.getText());
-            operator = 'x';
+            operator = '*';
             textField.setText("");
  
          }
@@ -153,7 +153,42 @@ public class Calculator implements ActionListener{
 
             num2 = Double.parseDouble(textField.getText());
             
-            
+            switch(operator){
+                case '+':
+                result = num1 + num2;
+                break;
+                case '-':
+                result = num1 - num2;
+                break;
+                case '*':
+                result = num1 * num2;
+                break;
+                case '/':
+                result = num1 / num2 ;
+                break;
+            }
+
+            textField.setText(String.valueOf(result));
+            num1 = result;
+ 
+         }
+
+         if(e.getSource() == clearButton){
+             
+            textField.setText("");
+ 
+         }
+
+         if(e.getSource() == deleteButton){
+             
+            String string = textField.getText();
+            textField.setText("");
+
+            for(int i=0;i<string.length()-1;i++){
+
+                textField.setText(textField.getText()+string.charAt(i));
+
+            }
  
          }
 
