@@ -2,5 +2,5 @@
 
 Simple Calculator made using JAVA implemented using Swing
 
-## JFrame
-## JLabel
+- JFrame
+- JLabel
