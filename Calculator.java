@@ -8,6 +8,10 @@ import javax.swing.JLabel;
 import javax.swing.SwingConstants;
 
 public class Calculator implements ActionListener {
+
+    Boolean isOperatorClicked = false;
+
+
     JFrame jf;
     JLabel displayLabel;
     JButton sevenButton;
@@ -20,6 +24,15 @@ public class Calculator implements ActionListener {
     JButton twoButton;
     JButton threeButton;
     JButton zeroButton;
+    JButton clearButton;
+
+    JButton divButton;
+    JButton mulButton;
+    JButton minButton;
+    JButton addButton;
+
+    JButton dotButton;
+    JButton equalButton;
 
 
 
@@ -92,10 +105,11 @@ public class Calculator implements ActionListener {
         threeButton.addActionListener(this);
 
 
-        JButton dotButton = new JButton("."); //ROW 4
+        dotButton = new JButton("."); //ROW 4
         dotButton.setBounds(30, 430, 80, 80);
         dotButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(dotButton);
+        dotButton.addActionListener(this);
 
         zeroButton = new JButton("0"); 
         zeroButton.setBounds(130, 430, 80, 80);
@@ -103,36 +117,38 @@ public class Calculator implements ActionListener {
         jf.add(zeroButton);
         zeroButton.addActionListener(this);
 
-        JButton equalButton = new JButton("=");
+        equalButton = new JButton("=");
         equalButton.setBounds(230, 430, 80, 80);
         equalButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(equalButton);
         
         // Operators
 
-        JButton divButton = new JButton("/"); // Div
+        divButton = new JButton("/"); // Div
         divButton.setBounds(330, 130, 80, 80);
         divButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(divButton);
 
-        JButton mulButton = new JButton("x"); //Mul
+        mulButton = new JButton("x"); //Mul
         mulButton.setBounds(330, 230, 80, 80);
         mulButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(mulButton);
 
-        JButton minButton = new JButton("-"); //Sub
+        minButton = new JButton("-"); //Sub
         minButton.setBounds(330, 330, 80, 80);
         minButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(minButton);
 
-        JButton addButton = new JButton("+"); //Add
+        addButton = new JButton("+"); //Add
         addButton.setBounds(330, 430, 80, 80);
         addButton.setFont(new Font("Arial",Font.PLAIN,30));
         jf.add(addButton);
 
-
-
-        
+        clearButton = new JButton("AC"); //Add
+        clearButton.setBounds(430, 430, 80, 80);
+        clearButton.setFont(new Font("Arial",Font.PLAIN,30));
+        jf.add(clearButton);
+        clearButton.addActionListener(this);
 
 
         jf.setVisible(true);
@@ -146,25 +162,40 @@ public class Calculator implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == sevenButton){
-       displayLabel.setText("7");
+       displayLabel.setText(displayLabel.getText()+"7");
         } else if(e.getSource() == eightButton){
-            displayLabel.setText("8");
+            displayLabel.setText(displayLabel.getText()+"8");
         }else if(e.getSource() == nineButton){
-            displayLabel.setText("9");
+            displayLabel.setText(displayLabel.getText()+"9");
         }else if(e.getSource() == fourButton){
-            displayLabel.setText("4");
+            displayLabel.setText(displayLabel.getText()+"4");
         }else if(e.getSource() == fiveButton){
-            displayLabel.setText("5");
+            displayLabel.setText(displayLabel.getText()+"5");
         }else if(e.getSource() == sixButton){
-            displayLabel.setText("6");
+            displayLabel.setText(displayLabel.getText()+"6");
         }else if(e.getSource() == oneButton){
-            displayLabel.setText("1");
+            displayLabel.setText(displayLabel.getText()+"1");
         }else if(e.getSource() == twoButton){
-            displayLabel.setText("2");
+            displayLabel.setText(displayLabel.getText()+"2");
         }else if(e.getSource() == threeButton){
-            displayLabel.setText("3");
+            displayLabel.setText(displayLabel.getText()+"3");
         }else if(e.getSource() == zeroButton){
-            displayLabel.setText("0");
+            displayLabel.setText(displayLabel.getText()+"0");
+        }else if(e.getSource() == dotButton){
+            displayLabel.setText(displayLabel.getText()+".");
+        }else if(e.getSource() == equalButton){
+            
+        }else if(e.getSource() == divButton){
+            isOperatorClicked = true;
+            
+        }else if(e.getSource() == mulButton){
+            
+        }else if(e.getSource() == minButton){
+            
+        }else if(e.getSource() == addButton){
+            
+        }else if(e.getSource() == clearButton){
+            displayLabel.setText("");
         }
         
     }
