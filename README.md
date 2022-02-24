@@ -6,3 +6,7 @@ Simple Calculator made using JAVA implemented using Swing
 - JLabel
 
 ![Calculator Screenshot](https://github.com/nullpwn/Calculator-Project-Java/blob/master/Calculator%20Screenshot.png)
+
+# Author
+
+**[Alwin Paul](https://www.linkedin.com/in/alwin-paul/)**
